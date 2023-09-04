@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+/* hero section css */
 .hero__section{
     background-image: url(images/heroSectionBackground.png);
     background-size: cover;
@@ -11,6 +13,7 @@
     background-repeat: no-repeat;
     color: rgb(248, 248, 248);
     min-height: 60vh;
+    margin-bottom: 20px; 
 }
 
 .navbar{
@@ -128,12 +131,49 @@
     }
 }
 
+/* cards containers css */
 .card{
      margin: 3rem auto;
     width: 90%;
     align-items: center;
     justify-content: center;
+    margin-top: 20px; 
+    border: none;       /*  Remove borders */
+    background: none;    /* Make background transparent */
 }
+/* External CSS to place cards on the same row */
+/* trial */
+.row {
+    display: flex;
+    justify-content: space-between; /* Distribute space between the columns */
+    flex-wrap: wrap; /* Allow wrapping to the next row if needed */
+  }
+  
+  .col-md-4 {
+    width: calc(20% - 20px); /* Adjust the width and margin as needed */
+    margin-bottom: 10px; /* Add margin to the bottom of each card */
+    margin-right: 1px;
+  }
+  /* External CSS to reduce the size of the cards */
+.card .card {
+    max-width: 250px; /* Adjust the maximum width as needed */
+    margin: -10px; /* Adjust the margin to reduce spacing */
+    margin-top: 30px; /* Adjust the margin to the top  */
+  }
+  
+  .card1 {
+    height: auto; /* Remove the fixed height */
+    width:max-content;
+
+  }
+  
+  .card-img-top {
+    max-height: 150px; /* Adjust the maximum height of the card images */
+  }
+  
+
+  /* trial */
+  
 .card img{
     width: 100%;
     height: 160px;
@@ -141,9 +181,19 @@
     object-position: center;
     
 }
-.card :hover{
+.card .card :hover{
     transform: scale(1.05);
 }
+
+.card1 {
+    border: 1px solid #ccc; /* Add a 1px solid gray border */
+    background-color: #fff; /* Set a white background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Add transitions for smooth hover effects */
+  }
+
+
+/* collection css   */
 .collection{
      margin: 3rem auto;
     width: 20%;
@@ -178,7 +228,259 @@
     font-size: 10px;
     position:relative;
     align-items: center;
+    width: 80%;
 }
 .collections_card_container {
     align-items: center;
+    height: 100px;
+    width: 1500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    font-size: 10px;
+    position:relative;
+    align-items: center;
 }
+.collections_card_container img{
+    height: max-content;
+}
+.card .collections {
+    margin: 50px; /* Adjust the margin to reduce spacing */
+  }
+  
+.card-img-overlay {
+    padding: 10px; /* Adjust the padding to reduce spacing */
+    /* adding the down black shadow codes  */
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.005) 100%);
+    /* background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.9) 100%); */
+
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  } 
+  .collections_card_container .col-md-3 {
+    margin: -40px; /* Adjust the margin to reduce spacing */
+  }
+  /* Adjust the z-index to bring the text container forward */
+/* Add margin to the text container to create spacing */
+.sub__heading_container {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px; /* Adjust the margin as needed */
+  }
+
+  /* Center the content and add padding to the sides */
+.collections1 {
+    text-align: center;
+    padding: 0 200px; /* Adjust the padding as needed */
+  }
+
+  .collections1 h1 {
+    text-align: left;
+    margin-right: 20px; /* Adjust the margin as needed for spacing */
+  }
+
+  /* collection css done here  */
+
+  /* spacinng btn the two sections  */
+  .collections  {
+    margin-bottom: 200px; /* Adjust the margin as needed */
+  }
+  
+  .semiContainer {
+    margin-top: 1px; /* Adjust the margin as needed */
+  }
+
+
+  /* get the app section css */
+  .get__the_app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 251, 247);
+    width: 100%;
+    padding: 3rem 6rem;
+}
+
+.get__the_app .semiContainer{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.get__the_app .semiContainer .left{
+    flex: 2;
+}
+
+/* .get__the_app .semiContainer .left img */
+/*  .semiContainer .left img */
+/* .left img */
+
+.get__the_app .semiContainer .left img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* column : 12 */
+
+.get__the_app .semiContainer .right{
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.get__the_app .semiContainer .right h1{
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.get__the_app .semiContainer .right p{
+    font-size: 0.8rem;
+}
+
+
+.get__the_app .semiContainer .right .radio__buttons_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.get__the_app .semiContainer .right .radio__buttons_container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.right .radio__buttons_container div input{
+    height: 15px;
+    width: 15px;
+    accent-color: rgb(239, 79, 95);
+}
+
+.semiContainer .right .input_container{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.input_container{
+    flex-wrap: wrap;
+}
+
+.input_container button, .input_container input{
+    padding: 10px 12px;
+}
+
+.input_container input{
+    flex: auto;
+    border: 1.5px solid gray;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input_container button{
+    border: none;
+    background-color: rgb(239, 79, 95);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.right .download__app_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+
+.download__app_container h5{
+    font-weight: 400;
+    color: gray;
+}
+
+.download__app_container div{
+    display: flex;
+    gap: 1rem;
+}
+
+.download__app_container div img{
+    width: 35%;
+}
+
+
+
+@media only screen and (max-width: 1300px){
+    .get__the_app .semiContainer .left,
+    .get__the_app .semiContainer .right {
+        flex: 1;
+    }
+    .get__the_app .semiContainer{
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+  .get__the_app{
+    padding: 2rem;
+  }
+  .get__the_app .semiContainer{
+    width: 90%;
+    flex-direction: column;
+  }
+  .get__the_app .semiContainer .right h1{
+    font-size: medium;
+  }
+}
+
+
+/* footer css */
+.fotterimg img{
+    height: 60px;
+    width: 200px;
+}
+
+
+/* Style the social media buttons */
+.footer {
+  /*margin-left: -20px; /* Add spacing between buttons */
+ 
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap to the next line if needed */
+  justify-content: space-between; /* Distribute content evenly along the horizontal axis */
+  align-items:start; 
+}
+
+/* Add this CSS to make the footer elements display in a row *
+
+/* Adjust the width of each grid column to fit the content */
+.footer .container .col-lg-3 {
+  flex: 0 0 calc(20% - 1rem); /* Adjust the width as needed */
+  max-width: calc(20% - 1rem); /* Adjust the width as needed */
+  margin-right: 1rem; /* Add some spacing between columns */
+}
+
+/* Add this CSS to remove underlines from links */
+.footer a {
+    text-decoration: none;
+  }
+  
+/* Add this CSS to center the footer content */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*min-height: 100vh; /* Ensures the footer takes up at least the full viewport height */
+  }
+  
+
+
+
