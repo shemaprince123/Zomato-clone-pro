@@ -415,7 +415,7 @@
 }
 
 
-
+/* making get the app responsive */
 @media only screen and (max-width: 1300px){
     .get__the_app .semiContainer .left,
     .get__the_app .semiContainer .right {
@@ -480,7 +480,110 @@
     align-items: center;
     /*min-height: 100vh; /* Ensures the footer takes up at least the full viewport height */
   }
+
+  .footer {
+      width: 100%;
+  }
+
+  .footer_section1 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      margin: auto;
+  }
+
+  .footer_section1 img {
+      width: 130px;
+  }
+
+  .section1__buttonContainer {
+      display: flex;
+      gap: 1rem;
+  }
+
+  .section1__buttonContainer button {
+      padding: 5px;
+      width: 90px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      background-color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+  }
   
 
+/* adding responsiveness on the web page */
+
+/* card  */
+
+/* Default styles for all screen sizes */
+
+/* Media query for screens smaller than 768px (typical tablet size) */
+@media (max-width: 1300px) {
+    .col-md-4 {
+        width: 50%;
+        /* Two cards per row on medium-sized screens */
+        margin-bottom: 20px;
+        /* Add some spacing between the cards */
+    }
+}
+
+/* Media query for screens smaller than 576px (typical mobile phone size) */
+@media (max-width: 900px) {
+    .col-md-4 {
+        width: 100%;
+        /* One card per row on small screens */
+        margin-bottom: 20px;
+        /* Add some spacing between the cards */
+    }
+}
 
 
+
+/* collection responsiveness */
+/* Ensure images in the card containers are responsive */
+.card-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust the layout of the collection section for smaller screens */
+@media (max-width: 320px) {
+    .collections {
+        padding: 10px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .collections_card_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-3 {
+        width: 90%;
+        /* Reduce width to fit smaller screens */
+        margin-bottom: 10px;
+        /* Adjust margin for smaller screens */
+    }
+
+    .collections1 {
+        text-align: center;
+    }
+
+    /* Adjust font size for smaller screens */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Adjust font size and spacing for subheadings */
+    .sub__heading_container {
+        font-size: 14px;
+        line-height: 1.2;
+        margin-top: 10px;
+    }
+}
